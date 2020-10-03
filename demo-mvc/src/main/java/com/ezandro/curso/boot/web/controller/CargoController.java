@@ -75,3 +75,4 @@ public class CargoController {
 		return departamentoService.buscarTodos();
 	}
 }
+

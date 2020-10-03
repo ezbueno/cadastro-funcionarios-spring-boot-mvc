@@ -27,3 +27,4 @@ public interface FuncionarioDao {
 
 	List<Funcionario> findByDataSaida(LocalDate saida);
 }
+
