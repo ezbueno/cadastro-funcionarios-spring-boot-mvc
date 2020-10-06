@@ -21,13 +21,13 @@ public class DepartamentoController {
 	
 	@GetMapping(path = "/cadastrar")
 	public String cadastrar(Departamento departamento) {
-		return "/departamento/cadastro";
+		return "departamento/cadastro";
 	}
 	
 	@GetMapping(path = "/listar")
 	public String listar(ModelMap model) {
 		model.addAttribute("departamentos", departamentoService.buscarTodos());
-		return "/departamento/lista";
+		return "departamento/lista";
 	}
 	
 	@PostMapping(path = "/salvar")
@@ -40,7 +40,7 @@ public class DepartamentoController {
 	@GetMapping(path = "/editar/{id}")
 	public String preEditar(@PathVariable("id") Long id, ModelMap model) {
 		model.addAttribute("departamento", departamentoService.buscarPorId(id));
-		return "/departamento/cadastro";
+		return "departamento/cadastro";
 	}
 	
 	@PostMapping(path = "/editar")

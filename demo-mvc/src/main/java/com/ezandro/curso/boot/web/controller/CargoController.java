@@ -30,13 +30,13 @@ public class CargoController {
 	
 	@GetMapping(path = "/cadastrar")
 	public String cadastrar(Cargo cargo) {
-		return "/cargo/cadastro";
+		return "cargo/cadastro";
 	}
 	
 	@GetMapping(path = "/listar")
 	public String listar(ModelMap model) {
 		model.addAttribute("cargos", cargoService.buscarTodos());
-		return "/cargo/lista";
+		return "cargo/lista";
 	}
 	
 	@PostMapping(path = "/salvar")
